@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Imagen de fondo -->
+    <!-- Imagen de fondo -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/imagen"
+        android:scaleType="centerCrop"/>
+
+
+    <!-- Contenedor principal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+        <!-- RecyclerView para mostrar los eventos -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewEventos"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="vertical" />
+
+        <!-- Controles de paginación -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <ImageButton
+                android:id="@+id/buttonPrevious"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_button_circle"
+                android:contentDescription="Botón Anterior"
+                android:enabled="false"
+                android:src="@drawable/ic_previous"
+                android:scaleType="centerInside"
+                app:tint="@android:color/white"
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/textPageNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:background="@drawable/bg_page_counter"
+                android:gravity="center"
+                android:padding="6dp"
+                android:text="Página 1"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+            <ImageButton
+                android:id="@+id/buttonNext"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_button_circle"
+                android:contentDescription="Botón Siguiente"
+                android:src="@drawable/ic_next"
+                android:scaleType="centerInside"
+                app:tint="@android:color/white"
+                android:padding="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
