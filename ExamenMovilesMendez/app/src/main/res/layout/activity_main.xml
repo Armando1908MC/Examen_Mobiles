@@ -22,6 +22,31 @@
         android:orientation="vertical"
         android:padding="16dp">
 
+        <!-- Título mejorado -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/bg_title"
+            android:padding="12dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:id="@+id/textTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Gateway to the Past"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:shadowColor="@android:color/darker_gray"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="4"
+                android:gravity="center" />
+        </LinearLayout>
+
 
         <!-- RecyclerView para mostrar los eventos -->
         <androidx.recyclerview.widget.RecyclerView
